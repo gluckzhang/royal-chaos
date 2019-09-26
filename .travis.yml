@@ -1,12 +1,16 @@
+# this script is modified from https://github.com/INRIA/spoon/blob/master/.travis.yml
+
 language: java
 
 # moving to Ubuntu Bionic 18.04, see https://docs.travis-ci.com/user/reference/overview/
 dist: bionic
 
-jdk:
-  - oraclejdk8
-  - oraclejdk11
-  - openjdk8
-  - openjdk11
+env:
+  global:
+  - M2_HOME="/usr/local/maven"
+  matrix:
+  - SCRIPT=travis-jdk8.sh
+  - SCRIPT=travis-jdk10.sh
+  - SCRIPT=travis-jdk11.sh
 
-script: ./chore/travis/travis-test.sh
+script: ./chore/travis/$SCRIPT

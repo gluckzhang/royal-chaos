@@ -3,16 +3,13 @@
 # fails if anything fails
 set -e
 
-##################################################################
-# ChaosMachine
-##################################################################
-cd chaosmachine
-mvn -q test
-cd ..
+# a list of java projects to be tested
+projects="chaosmachine tripleagent"
 
-##################################################################
-# TripleAgent
-##################################################################
-cd tripleagent
-mvn -q test
-cd ..
+for project in $projects
+do
+	echo "Testing project $project"
+	cd $project
+	mvn -q test
+	cd ..
+done
