@@ -15,6 +15,7 @@ public class TryCatchObjectSCTest {
 
     @Test
     public void scMultipleTryCatchTest() {
+        AgentLoader.loadAgentClass(ChaosMachineAgent.class.getName(), "mode:scircuit");
         // this time, we do short-circuit testing, exceptions will be injected into the beginning of every try block
         // hence "_1st line in xxx tc" should not appear in the return value
         TryCatchTestObject tcTest = new TryCatchTestObject();
