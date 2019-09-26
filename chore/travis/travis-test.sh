@@ -4,7 +4,7 @@
 set -e
 
 # a list of java projects to be tested
-projects="chaosmachine tripleagent"
+projects="tripleagent"
 
 for project in $projects
 do
