@@ -10,6 +10,6 @@ for project in $projects
 do
 	echo "Testing project $project"
 	cd $project
-	$M2_HOME/bin/mvn -q test
+	sudo $M2_HOME/bin/mvn -q test
 	cd ..
 done
