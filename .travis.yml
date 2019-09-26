@@ -1,17 +1,8 @@
 # this script is modified from https://github.com/INRIA/spoon/blob/master/.travis.yml
 
 language: java
+jdk:
+  - oraclejdk8
 
-env:
-  global:
-  - M2_HOME="/usr/local/maven"
-  matrix:
-  - SCRIPT=travis-jdk8.sh
-  - SCRIPT=travis-jdk10.sh
-  - SCRIPT=travis-jdk11.sh
-
-# insall Java8 here
-install:
-  - sudo apt-get -y install openjdk-8-jdk
-
-script: ./chore/travis/$SCRIPT
+before_script:
+  - cd chaosmachine
