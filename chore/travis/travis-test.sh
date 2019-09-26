@@ -4,12 +4,12 @@
 set -e
 
 # a list of java projects to be tested
-projects="tripleagent"
+projects="chaosmachine tripleagent"
 
 for project in $projects
 do
 	echo "Testing project $project"
 	cd $project
-	$M2_HOME/bin/mvn -q install
+	$M2_HOME/bin/mvn test
 	cd ..
 done
