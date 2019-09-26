@@ -8,11 +8,6 @@ import se.kth.chaos.testfiles.TryCatchTestObject;
 
 public class TryCatchObjectSCTest {
 	
-    @Before
-    public void loadAgent() {
-        AgentLoader.loadAgentClass(ChaosMachineAgent.class.getName(), "mode:scircuit");
-    }
-
     @Test
     public void scMultipleTryCatchTest() {
         AgentLoader.loadAgentClass(ChaosMachineAgent.class.getName(), "mode:scircuit");
