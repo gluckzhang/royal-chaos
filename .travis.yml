@@ -1,0 +1,12 @@
+language: java
+
+# moving to Ubuntu Bionic 18.04, see https://docs.travis-ci.com/user/reference/overview/
+dist: bionic
+
+jdk:
+  - oraclejdk8
+  - oraclejdk11
+  - openjdk8
+  - openjdk11
+
+script: ./chore/travis/travis-test.sh
